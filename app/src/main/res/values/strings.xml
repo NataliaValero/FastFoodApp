@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Food Delivery App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_and_order">Search and order</string>
+    <string name="order_now">Order now</string>
+    <string name="categories">Categories</string>
+    <string name="recommended">Recommended</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancelBtn">Cancel</string>
+
+</resources>

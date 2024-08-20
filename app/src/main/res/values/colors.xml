@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#3d33a8</color>
+    <color name="orange">#ff5e00</color>
+    <color name="grey">#6e6e70</color>
+    <color name="yellow">#fea900</color>
+    <color name="transparent">@color/transparent_highlight</color>
+    <color name="barNavView">#F1E5E2</color>
+
+
+    <color name="colorSelected">#ff5e00</color>
+    <color name="colorUnselected">#494949</color>
+</resources>

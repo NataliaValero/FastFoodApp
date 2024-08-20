@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.Activity.ProductDetailFragment">
+
+
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:src="@drawable/supreme"
+        app:layout_constraintDimensionRatio="1:0.65"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_product_detail"
+        android:outlineProvider="background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageProduct" />
+
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background"
+        tools:text="Pizza Supreme" />
+
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_grey_bar"
+        android:gravity="center_vertical"
+        android:paddingStart="10sp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/productName"
+        app:layout_constraintStart_toStartOf="@+id/productName"
+        app:layout_constraintTop_toBottomOf="@+id/productName"
+        tools:text="$99.0" />
+
+    <include
+        android:id="@+id/quantityBar"
+        layout="@layout/quantity_bar"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/productPrice"
+        app:layout_constraintEnd_toEndOf="@+id/productName"
+        app:layout_constraintTop_toTopOf="@+id/productPrice" />
+
+
+    <ImageView
+        android:id="@+id/starImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/star"
+        app:layout_constraintEnd_toStartOf="@+id/productPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/starImage"
+        app:layout_constraintStart_toEndOf="@+id/starImage"
+        app:layout_constraintTop_toTopOf="@+id/starImage"
+        tools:text="4.8" />
+
+    <ImageView
+        android:id="@+id/timeImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/time"
+        app:layout_constraintEnd_toEndOf="@+id/productPrice"
+        app:layout_constraintStart_toStartOf="@+id/starImage"
+        app:layout_constraintTop_toTopOf="@+id/starImage" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/timeImage"
+        app:layout_constraintStart_toEndOf="@+id/timeImage"
+        app:layout_constraintTop_toTopOf="@+id/timeImage"
+        tools:text="20 min" />
+
+    <ImageView
+        android:id="@+id/caloriesImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_calories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timeImage"
+        app:layout_constraintTop_toTopOf="@+id/timeImage" />
+
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/caloriesImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/caloriesImage"
+        app:layout_constraintTop_toTopOf="@+id/caloriesImage"
+        tools:text="1200 kcal" />
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/calories"
+        app:layout_constraintStart_toStartOf="@+id/starImage"
+        app:layout_constraintTop_toBottomOf="@+id/starImage"
+        tools:text="Classic pizza topped with tomato sauce, mozzarella cheese, and fresh basil" />
+
+
+    <View
+        android:id="@+id/imageView4"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_grey_price"
+        android:elevation="10dp"
+        android:outlineProvider="bounds"
+        app:layout_constraintStart_toStartOf="@id/ingredients"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:elevation="20dp"
+        android:text="Total Price"
+        android:textColor="@color/colorUnselected"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:text="$19.52"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    <TextView
+        android:id="@+id/addToCartTv"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_addcart_pressed_effect"
+        android:drawableStart="@drawable/shopping_cart_start_selector"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Add to Cart"
+        android:textColor="@drawable/text_color_selector"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/ingredients"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
